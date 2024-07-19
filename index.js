@@ -2,8 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
-const port = process.env.PORT || 3000;
-const ip = process.env.SERVERIP || '127.0.0.1';
+const port = process.env.PORT || 6000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -38,6 +37,6 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
-app.listen(port, process.env.SERVERIP, () => {
-    console.log(`Email service listening at ${ip}:${port}`);
+app.listen(port, () => {
+    console.log(`Email service listening at ${ip}:`);
 });
