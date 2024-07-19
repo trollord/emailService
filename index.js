@@ -38,7 +38,7 @@ app.post('/send-email', async (req, res) => {
     }
 });
 
-app.post('/ping', async (req, res) => {
+app.get('/ping', async (req, res) => {
    res.status(200).send({ message: 'Pong!'});
 });
 
