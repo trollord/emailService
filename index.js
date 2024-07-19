@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.post('/send-email', async (req, res) => {
     const { to, subject, body } = req.body;
 
-    if (typeof to === "string" && typeof subject === "string" && typeof text === "string") {
+    if (typeof to === "string" && typeof subject === "string" && typeof body === "string") {
         let transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
