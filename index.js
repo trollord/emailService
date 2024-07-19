@@ -33,9 +33,13 @@ app.post('/send-email', async (req, res) => {
         } catch (error) {
             res.status(500).send({ message: 'Failed to send email', error: error });
         }
-    }else {
+    } else {
         res.status(400).json({ error: 'Required parameters missing' });
     }
+});
+
+app.post('/ping', async (req, res) => {
+   res.status(200).send({ message: 'Pong!'});
 });
 
 app.listen(port, () => {
