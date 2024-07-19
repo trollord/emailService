@@ -3,6 +3,7 @@ const express = require('express');
 const nodemailer = require('nodemailer');
 const app = express();
 const port = process.env.PORT || 6000;
+const ip = process.env.SERVERIP || '127.0.0.1';
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
